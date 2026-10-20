@@ -1,0 +1,27 @@
+:root {
+	--felt-900: #06251b;
+	--felt-700: #0e4a3e;
+	--felt-500: #1a7a5e;
+	--brass: #f3c34d;
+	--brass-deep: #b08a38;
+	--ivory: #f6edd8;
+	--wood: #5a371c;
+	--danger: #e66a52;
+	--serif: Georgia, 'Times New Roman', serif;
+	--sans: 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+	font-family: var(--sans);
+	color: var(--ivory);
+	background: radial-gradient(ellipse at 50% 35%, #17694f 0%, var(--felt-700) 45%, #072a21 100%);
+	background-attachment: fixed;
+	-webkit-font-smoothing: antialiased;
+}
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+	* { animation: none !important; transition: none !important; }
+}

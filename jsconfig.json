@@ -1,0 +1,5 @@
+{
+	"extends": "$app/tsconfig",
+	"include": ["src", "realtime", "api", "*.js"],
+	"compilerOptions": { "allowJs": true, "checkJs": false }
+}

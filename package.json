@@ -1,0 +1,38 @@
+{
+	"name": "gaple-online",
+	"version": "2.0.0",
+	"private": true,
+	"type": "module",
+	"description": "Gaple online: SvelteKit 3 + Phaser 4 + WebSocket di Vercel Functions",
+	"scripts": {
+		"dev": "vite dev --host",
+		"build": "vite build",
+		"preview": "vite preview --host",
+		"assets": "python3 scripts/generate_assets.py",
+		"prepare": "svelte-kit sync || echo ''"
+	},
+	"imports": {
+		"#lib": "./src/lib/index.js",
+		"#lib/*": "./src/lib/*"
+	},
+	"engines": {
+		"node": "24.x"
+	},
+	"dependencies": {
+		"ioredis": "^5.4.0",
+		"phaser": "^4.2.1",
+		"ws": "^8.18.0"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-vercel": "^7.0.1",
+		"@sveltejs/kit": "^3.1.0",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"svelte": "^5.57.1",
+		"vite": "^8.0.12"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	}
+}
